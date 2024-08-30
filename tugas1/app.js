@@ -73,4 +73,30 @@ var InitDemo = function () {
     console.error('ERROR validating program', gl.getProgramInfoLog(program));
     return;
   }
+
+  var triangleVertices =
+  [
+    0.0, 0.5, 
+    -0.5, -0.5,
+    0.5, 0.5 
+  ];
+
+  var triangleVertexBufferObject = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBufferObject);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.STATIC_DRAW);
+
+  var positionAttribLocation = gl.getAttribLocation(program, 'vertPosition');
+  gl.vertexAttribPointer(
+    positionAttribLocation,
+    2,
+    gl.FLOAT,
+    gl.FALSE,
+    2 * Float32Array.BYTES_PER_ELEMENT,
+    0
+  );
+
+  gl.enableVertexAttribArray(positionAttribLocation);
+
+  gl.useProgram(program);
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
 };
