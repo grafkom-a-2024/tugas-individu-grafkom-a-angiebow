@@ -1,6 +1,8 @@
-# Tugas 3
+<img width="1710" alt="image" src="https://github.com/user-attachments/assets/7a5e0569-f976-4f88-b462-e709d0418d77"># Tugas 3
 
 ## 1. Colorful Cube
+
+https://github.com/user-attachments/assets/127b8bb6-47cd-4a86-b4d7-4e88e4c3f07b
 
 Di dalam HTML, terdapat tag `<canvas>` yang berfungsi sebagai tempat rendering objek 3D, dan file JavaScript `script.js` dihubungkan untuk melakukan proses tersebut. Kode dimulai dengan mendapatkan elemen canvas menggunakan `getElementById`, kemudian menciptakan konteks WebGL (`gl`). Objek 3D dibuat dengan mendefinisikan buffer untuk menyimpan koordinat titik-titik (vertices) dari objek, seperti segitiga dan kubus. Data ini kemudian dikirim ke buffer WebGL menggunakan `gl.bufferData`.
 
