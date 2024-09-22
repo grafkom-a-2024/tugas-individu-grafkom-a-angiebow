@@ -1,4 +1,4 @@
-<img width="1710" alt="image" src="https://github.com/user-attachments/assets/7a5e0569-f976-4f88-b462-e709d0418d77"># Tugas 3
+# Tugas 3
 
 ## 1. Colorful Cube
 
@@ -11,6 +11,8 @@ Shader, yang bertugas untuk mengatur posisi dan warna objek, didefinisikan denga
 Selain itu, terdapat kode untuk mempersiapkan warna tiap sisi kubus dan indeks untuk menggambar permukaan kubus menggunakan kombinasi dua segitiga per sisi. Kode juga mencakup pengaturan matriks proyeksi dan tampilan yang digunakan untuk memproyeksikan dan menampilkan objek 3D pada canvas. Fungsi-fungsi rotasi (`rotateX`, `rotateY`, `rotateZ`) digunakan untuk memutar objek 3D secara dinamis. Akhirnya, fungsi animasi digunakan untuk memperbarui posisi dan rotasi objek secara terus-menerus agar terlihat bergerak dan berputar pada canvas.
 
 ## 2. Cube Puzzle
+
+https://github.com/user-attachments/assets/7c7d98d7-ebb2-4467-a656-36ae2d418fa7
 
 Implementasi sederhana dari Rubik's Cube menggunakan p5.js, terinspirasi oleh Coding Challenge #142.1 dari The Coding Train oleh Daniel Shiffman. Kode ini menciptakan kubus Rubik 3x3x3, di mana setiap "cubie" (unit kecil dari kubus Rubik) di-render secara individual dalam 3D dengan menggunakan WebGL di p5.js.
 
@@ -25,6 +27,8 @@ Fungsi `draw()` bertanggung jawab untuk me-render setiap cubie pada layar. Di da
 Dengan menggunakan `p5.EasyCam`, pengguna dapat memanipulasi tampilan kamera untuk melihat kubus dari berbagai sudut dengan interaksi mouse.
 
 ## 3. Shadow Cube
+
+https://github.com/user-attachments/assets/5c86d72b-aebf-4124-a690-caf7fb2d32c4
 
 Membuat kubus 3D yang berputar menggunakan WebGL dan memanfaatkan shader vertex dan fragment untuk merendernya. Tujuan utamanya adalah menggambar dan memutar kubus 3D secara terus-menerus di kanvas WebGL. WebGL digunakan untuk berinteraksi langsung dengan GPU, memastikan rendering grafis yang halus dan memungkinkan akselerasi perangkat keras.
 
@@ -42,6 +46,8 @@ Di HTML, elemen <canvas> berfungsi sebagai area tempat WebGL merender kubus 3D. 
 
 ## 4. Solar System
 
+https://github.com/user-attachments/assets/bc0ef983-b67d-4a42-b730-00e33b1983df
+
 Membuat simulasi tata surya 3D menggunakan p5.js, di mana matahari dikelilingi oleh planet dan bulan yang dapat berputar. Proyek ini mengimplementasikan fungsi orbit untuk memutar planet-planet dan menampilkan bentuk bola sebagai representasi matahari dan planet di ruang 3D.
 
 Bagian utama dari simulasi ini menggunakan kelas `Planet`, yang memiliki beberapa properti seperti radius, jarak dari pusat, kecepatan orbit, dan vektor acak untuk menentukan posisinya dalam ruang. Setiap planet dapat memiliki "bulan" atau sub-planet yang juga berputar. Fungsi `spawnMoons` digunakan untuk membuat bulan dengan jumlah acak yang mengorbit di sekitar planet utama.
@@ -54,6 +60,8 @@ Proyek ini menggunakan teknik pemodelan objek sederhana dan transformasi 3D untu
 
 ## 5. Sphere
 
+https://github.com/user-attachments/assets/3c7df87b-acaa-41d0-a250-81c241f45e4d
+
 Membuat visualisasi 3D bola dunia menggunakan geometri bola dengan p5.js. Dalam simulasi ini, bola dunia digambar menggunakan strip segitiga yang terbentuk dari koordinat titik-titik di permukaan bola.
 
 Proyek ini dimulai dengan mendeklarasikan variabel-variabel untuk menyimpan titik-titik globe, jari-jari bola `r`, dan jumlah total titik dalam grid (variabel `total`). Dua variabel tambahan, `angleX` dan `angleY`, digunakan untuk memutar bola secara bertahap.
@@ -65,6 +73,8 @@ Fungsi `draw` memutar bola dunia menggunakan `rotateX` dan `rotateY`, memperbaru
 Proyek ini menggabungkan dasar-dasar geometri bola dengan rendering 3D untuk menciptakan visual yang menarik, sekaligus memanfaatkan rotasi untuk memberikan dinamika ke dalam tampilan bola.
 
 ## 6. Wave
+
+https://github.com/user-attachments/assets/3a8ff6fe-dc35-4a8f-9974-1072eaed79c3
 
 Membuat visualisasi 3D menggunakan WebGL untuk menggambar bentuk berdasarkan fungsi sinus. Ini mencakup vertex shader dan fragment shader yang mendefinisikan bagaimana titik-titik ditampilkan di kanvas.
 
