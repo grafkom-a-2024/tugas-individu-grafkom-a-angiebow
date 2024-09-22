@@ -1,15 +1,5 @@
-// Rubiks Cube 1
-// The Coding Train / Daniel Shiffman
-// https://thecodingtrain.com/CodingChallenges/142.1-rubiks-cube.html
-// https://youtu.be/9PGfL4t-uqE
-
-// Since PeasyCam is only for Java, this instead uses p5.EasyCam,
-// which is based on PeasyCam but is made for p5.js.
-// It can be found here: https://github.com/freshfork/p5.EasyCam
-
 let cam;
 
-// UP, DOWN, RIGHT, LEFT, FRONT, BACK
 const UPP = 0;
 const DWN = 1;
 const RGT = 2;
@@ -27,10 +17,9 @@ const colors = [
 ];
 
 const dim = 3;
-const cube = []; // Cubie[dim][dim][dim]; initialized in setup()
+const cube = []; 
 
 function setup() {
-  // Disable the context menu on the canvas so the camera can use the right mouse button
   createCanvas(600, 600, WEBGL).elt.oncontextmenu = () => false;
 
   cam = createEasyCam({ distance: 400 });
