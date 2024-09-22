@@ -1,42 +1,24 @@
-// Set up the canvas for drawing the 3D objects
 let canvas = document.getElementById('3d_canvas');
 let gl = canvas.getContext('experimental-webgl');
 
-// Example preparing vertices of a square sides
-// First, create a buffer for the vertices, colors, and indices
 let vertices = [
-    // front face of the cube
     -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5,
-    // back face of the cube
     -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5,
-    // left face of the cube
     -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5,
-    // right face of the cube
     0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5,
-    // top face of the cube
     -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5,
-    // bottom face of the cube
     -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
 ];
 
 let colors = [
-    // Front face of the cube is colored white 
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-    // Back face of the cube is colored pink
     1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1,
-    // Left face of the cube is colored blue
     0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1,
-    // Right face of the cube is colored red
     1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
-    // Top face of the cube is colored yellow
     1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0,
-    // Bottom face of the cube is colored green
     0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0
 ];
 
-// Since webGL can only draw triangles, we need to create and combine triangles to create
-// or approximate a square for the sides of the cubes, which is by combining two triangles
-// To show the webgl on how to create the triangles, indices must be defined so that the program can know where to start drawing and where to next
 let indices = [
     0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7,
     8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15,
