@@ -67,9 +67,6 @@ function createVertices() {
   var pointSize = gl.getAttribLocation(shaderProgram, "pointSize");
   gl.vertexAttrib1f(pointSize, 20);
   
-//   var color = gl.getUniformLocation(shaderProgram, "color");
-//   gl.uniform4f(color, 0, 0, 0, 1);
-  
   var perspectiveMatrix = mat4.create();
   mat4.perspective(perspectiveMatrix, 1, canvas.width / canvas.height, 0.1, 11);
   var perspectiveLoc = gl.getUniformLocation(shaderProgram, "perspectiveMatrix");
@@ -91,10 +88,6 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-
-  /*
-   * https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-   */
   function getShader(gl, id) {
     var shaderScript, theSource, currentChild, shader;
 
@@ -119,15 +112,12 @@ function draw() {
     } else if (shaderScript.type == "x-shader/x-vertex") {
       shader = gl.createShader(gl.VERTEX_SHADER);
     } else {
-      // Unknown shader type
       return null;
     }
     gl.shaderSource(shader, theSource);
 
-// Compile the shader program
     gl.compileShader(shader);
 
-// See if it compiled successfully
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
       alert("An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader));
       return null;
